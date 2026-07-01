@@ -481,14 +481,14 @@
 }
 
 /* 4. [关键修复] 原文显示区域 (修复黑色背景) */
-/* 针Ý kiến sửa cho "Bản mới原文/Bản gốc原文" 中的 pre/code 标签 */
+/* 针对 "新版原文/原版原文" 中的 pre/code 标签 */
 .pw-diff-container pre, 
 .pw-diff-content-area pre,
 .pw-diff-content-area code,
 .pw-diff-content-area div[style*="background-color"] {
-    background-color: #FFFFFF !important; /* nền trắng bắt buộc */
+    background-color: #FFFFFF !important; /* 强制白底 */
     background: #FFFFFF !important;
-    color: var(--cozy-text) !important;   /* chữ nâu đậm bắt buộc */
+    color: var(--cozy-text) !important;   /* 强制深棕色字 */
     border: 2px solid var(--cozy-beige) !important;
     border-radius: 12px;
     padding: 15px !important;
