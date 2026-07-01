@@ -87,12 +87,74 @@ MIT License
 3.  Dán URL của fork này: `https://github.com/kkhanh-kas/st-persona-weaver`
 4.  Bấm **Save** và tải lại trang.
 
-### 📖 Dùng nhanh
+### 📖 Hướng dẫn sử dụng chi tiết
 
-1.  Sau khi cài, phía trên ô nhập sẽ có **icon đũa phép** (<i class="fa-solid fa-wand-magic-sparkles"></i>), bấm để mở panel.
-2.  **Tạo**: nhập yêu cầu ở trang soạn, bấm tạo.
-3.  **Tinh chỉnh**: bôi đen một đoạn trong kết quả, bấm nút "Sửa" hiện lên, hoặc nhập ý kiến ở dưới để tinh chỉnh.
-4.  **Lưu**: bấm "Lưu" để cất vào bản ghi, hoặc "Ghi đè persona hiện tại" để áp dụng ngay.
+#### 1. Mở bảng điều khiển
+1. Vào **Persona Management** (biểu tượng hình người), tìm nút **đũa phép** ✨ ở hàng nút điều khiển persona rồi bấm vào.
+2. Cách luôn dùng được: mở Console trình duyệt (phím F12), gõ `openPersonaWeaver()` rồi Enter.
+
+#### 2. Năm thẻ chính
+1. **Persona:** nơi soạn yêu cầu, xem kết quả, tinh chỉnh và lưu.
+2. **Tham khảo:** nguồn tư liệu cho AI (preset, lời chào nhân vật, World Info, hình ảnh, lịch sử chat).
+3. **API:** chọn dùng API chính của SillyTavern hay API riêng, và quản lý cấu hình.
+4. **Hệ thống:** ngôn ngữ đầu ra, giao diện, sửa Prompt, xem Debug, xuất nhập dữ liệu, cập nhật.
+5. **Bản ghi:** lịch sử các lần tạo, tìm lại và nạp lại.
+
+#### 3. Chọn chế độ User hay NPC
+Ở đầu thẻ **Persona** có công tắc **Chế độ User** và **Chế độ NPC**:
+1. **User:** tạo persona cho chính bạn (nhân vật người dùng).
+2. **NPC:** tạo nhân vật phụ cho câu chuyện.
+
+#### 4. Tạo một persona (các bước cơ bản)
+1. Vào thẻ **Persona**, chọn chế độ mong muốn.
+2. Tùy chọn: bấm **Khối mẫu (bấm để điền)** để chèn khung cấu trúc gợi ý vào ô yêu cầu.
+3. Gõ mô tả mong muốn vào ô yêu cầu. Bạn không cần điền hết mọi mục.
+4. Bấm **Tạo thiết lập User** (hoặc **Tạo thiết lập NPC**), chờ AI sinh nội dung.
+5. Kết quả hiện ở ô bên dưới dưới dạng YAML.
+
+#### 5. Tinh chỉnh kết quả và xem so sánh (Diff)
+1. Muốn sửa cả bài: gõ ý kiến vào ô tinh chỉnh rồi bấm **Tinh chỉnh**.
+2. Muốn sửa một đoạn: bôi đen đoạn đó trong kết quả, bấm nút nổi **Sửa đoạn này**, nhập ý kiến rồi tinh chỉnh.
+3. Sau khi tinh chỉnh, màn **so sánh** hiện ra: bấm **Bản gốc**, **Bản mới**, **Cuối cùng** để xem qua lại; bấm vào đoạn được tô sáng để chọn giữ bản cũ hay bản mới.
+4. Bấm **Áp dụng** để chốt, **Tạo lại** để làm lại cùng yêu cầu, hoặc **Bỏ** để hủy.
+
+#### 6. Lưu và áp dụng
+Ở hàng nút dưới kết quả:
+1. **Lưu vào bản ghi:** cất kết quả vào thẻ Bản ghi để dùng lại sau.
+2. **Sao chép nội dung:** copy YAML ra clipboard.
+3. **Ghi đè persona hiện tại:** áp thẳng kết quả vào User Persona đang chọn của SillyTavern (chỉ ở chế độ User).
+4. **Lưu vào World Info:** ghi kết quả thành một mục trong World Info đang gắn.
+
+#### 7. Dùng và tạo template (mẫu)
+1. **Chèn cấu trúc:** bấm **Khối mẫu (bấm để điền)** để đưa khung field vào ô yêu cầu.
+2. **Sửa mẫu:** bấm **Sửa mẫu** để mở trình sửa, đổi tên field theo ý, rồi bấm **Lưu mẫu**.
+3. **Nhờ AI tạo mẫu mới:** khi đang ở chế độ sửa mẫu, nhập yêu cầu (ví dụ: thêm thuộc tính tu tiên) rồi bấm **Tạo mẫu**, xong nhớ bấm **Lưu mẫu**.
+
+#### 8. Suy luận persona từ lịch sử chat
+1. Vào thẻ **Tham khảo**, bật **Cài đặt lịch sử chat**, chọn phạm vi (ví dụ 20 tin gần nhất, hoặc theo tầng).
+2. Quay lại thẻ **Persona**, nút tạo đổi thành **Tạo bằng suy luận chat**.
+3. Bấm để AI phân tích cuộc trò chuyện rồi dựng persona.
+
+#### 9. Tham khảo hình ảnh và World Info
+1. **Hình ảnh:** ở thẻ Tham khảo, mục **Tham khảo hình ảnh**, tải ảnh lên rồi chọn để AI mô tả ngoại hình theo ảnh.
+2. **World Info:** chọn World Info liên quan để AI đọc bối cảnh; có thể **Ghim** một World Info để giữ qua nhiều thẻ nhân vật.
+
+#### 10. Chọn ngôn ngữ đầu ra (tính năng riêng của bản Việt hóa)
+1. Vào thẻ **Hệ thống**, tìm **Ngôn ngữ đầu ra**.
+2. Chọn **Tiếng Anh**, **Tiếng Trung** hoặc **Tiếng Việt**. Mặc định là Tiếng Anh.
+3. Lựa chọn áp dụng cho **lần tạo hoặc tinh chỉnh tiếp theo**, quyết định ngôn ngữ persona AI viết ra.
+
+#### 11. Cấu hình API
+1. Vào thẻ **API**, ở **Nguồn API** chọn **API chính** (dùng chung với SillyTavern) hoặc **API riêng**.
+2. Với API riêng: tạo **Preset cấu hình**, điền URL, Key, chọn model; có **Thời gian chờ (giây)** và **Xuất theo luồng** để tránh lỗi 504.
+3. Bấm nút test để kiểm tra kết nối.
+
+#### 12. Sao lưu và khôi phục dữ liệu
+Ở thẻ **Hệ thống**, mục **Di trú dữ liệu**: tick chọn nội dung (ảnh, bản ghi, cấu hình API, giao diện) rồi bấm **Xuất** ra file hoặc **Nhập** lại từ file.
+
+#### 13. Mẹo
+1. Ô **Xem trước nội dung gửi (Debug)** ở thẻ Hệ thống cho bạn thấy đúng nội dung gửi cho AI, tiện để hiểu và chỉnh Prompt.
+2. Bạn có thể tự sửa Prompt ở mục **Xem & sửa Prompt**, bấm **Khôi phục mặc định** nếu muốn về bản gốc.
 
 ---
 
@@ -100,15 +162,15 @@ MIT License
 
 Bản dịch dùng cơ chế **từ điển + script** để dễ theo update từ repo gốc:
 
-- `src/` — bản gốc nguyên vẹn từ repo gốc (nguồn để dịch).
-- `i18n/dict.mjs` — từ điển: `EN` (template/prompt → tiếng Anh), `VI` (giao diện → tiếng Việt).
-- `i18n/patches.mjs` — **vá thêm tính năng** (không phải dịch) áp lên `index.js` sau khi dịch. Nếu upstream đổi code làm anchor không khớp, `build.mjs` sẽ báo tên patch để sửa `find`.
-- `scripts/build.mjs` — sinh lại file đã dịch ở thư mục gốc: `node scripts/build.mjs`.
-- `scripts/sync.mjs` — kéo bản mới từ repo gốc rồi build lại: `node scripts/sync.mjs`.
+1. `src/`: bản gốc nguyên vẹn từ repo gốc (nguồn để dịch).
+2. `i18n/dict.mjs`: từ điển, gồm `EN` (template và prompt sang tiếng Anh) và `VI` (giao diện sang tiếng Việt).
+3. `i18n/patches.mjs`: **vá thêm tính năng** (không phải dịch) áp lên `index.js` sau khi dịch. Nếu upstream đổi code làm anchor không khớp, `build.mjs` sẽ báo tên patch để sửa `find`.
+4. `scripts/build.mjs`: sinh lại file đã dịch ở thư mục gốc bằng `node scripts/build.mjs`.
+5. `scripts/sync.mjs`: kéo bản mới từ repo gốc rồi build lại bằng `node scripts/sync.mjs`.
 
-**Tính năng thêm của fork:** dropdown **"Ngôn ngữ đầu ra"** (Anh / Trung / Việt) trong tab Hệ thống — chọn ngôn ngữ persona AI sinh ra, mặc định Tiếng Anh. Cài đặt bằng cách chèn một chỉ thị vào cuối prompt (không sửa template bạn tự chỉnh).
+**Tính năng thêm của fork:** danh sách chọn **"Ngôn ngữ đầu ra"** (Anh, Trung, Việt) trong thẻ Hệ thống, để chọn ngôn ngữ persona AI sinh ra, mặc định Tiếng Anh. Cách làm: chèn một chỉ thị vào cuối prompt (không đụng template bạn tự chỉnh).
 
-Các file `index.js`, `style.css`, `manifest.json`, `Cozy_Fox.css` ở thư mục gốc là **bản sinh tự động — đừng sửa tay**; muốn đổi bản dịch thì sửa `i18n/dict.mjs` rồi build lại. Lần đầu cần thêm remote:
+Các file `index.js`, `style.css`, `manifest.json`, `Cozy_Fox.css` ở thư mục gốc là **bản sinh tự động, đừng sửa tay**. Muốn đổi bản dịch thì sửa `i18n/dict.mjs` rồi build lại. Lần đầu cần thêm remote:
 ```bash
 git remote add upstream https://github.com/sisisisilviaxie-star/st-persona-weaver.git
 ```
