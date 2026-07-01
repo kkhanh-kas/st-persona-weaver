@@ -2416,7 +2416,7 @@ async function openCreatorPopup() {
                 <div style="margin-bottom: 5px;">
                     <label style="color: var(--SmartThemeQuoteColor); font-weight:bold;"><i class="fa-solid fa-bug"></i> Xem trước nội dung gửi thời gian thực (Debug)</label>
                 </div>
-                <div style="font-size: 0.8em; opacity: 0.7; margin-bottom: 5px;">Sau khi bấm "Tạo thiết lập", bên dưới sẽ hiển thị toàn bộ nội dung thực sự gửi cho AI.</div>
+                <div style="font-size: 0.8em; opacity: 0.7; margin-bottom: 5px;">Sau khi bấm “Tạo thiết lập”, bên dưới sẽ hiển thị toàn bộ nội dung thực sự gửi cho AI.</div>
                 <textarea id="pw-debug-preview" class="pw-textarea" readonly style="
                     min-height: 250px; 
                     font-family: 'Consolas', 'Monaco', monospace; 
@@ -3216,7 +3216,7 @@ function bindEvents() {
                 if (!isEditingTemplate) {
                     $('#pw-toggle-edit-template').click();
                 }
-                toastr.success("Tạo mẫu thành công! Hãy bấm "Lưu mẫu" để xác nhận thay đổi.");
+                toastr.success("Tạo mẫu thành công! Hãy bấm “Lưu mẫu” để xác nhận thay đổi.");
             }
         } catch (e) {
             console.error(e);
@@ -4529,7 +4529,7 @@ const renderWiBooks = async () => {
     const allBooks = [...new Set([...baseBooks, ...(window.pwExtraBooks || [])])];
     
     if (allBooks.length === 0) { 
-        container.html('<div style="opacity:0.6; padding:10px; text-align:center;">Nhân vật này chưa gắn World Info, hãy thêm thủ công ở tab "World Info" hoặc gắn ở giao diện chính SillyTavern.</div>'); 
+        container.html('<div style="opacity:0.6; padding:10px; text-align:center;">Nhân vật này chưa gắn World Info, hãy thêm thủ công ở tab “World Info” hoặc gắn ở giao diện chính SillyTavern.</div>'); 
         return; 
     }
 

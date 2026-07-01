@@ -329,7 +329,7 @@ export const VI = {
     // --- Vùng Debug ---
     'Debug 预览区域': 'Khu vực xem trước Debug',
     '实时发送内容预览 (Debug)': 'Xem trước nội dung gửi thời gian thực (Debug)',
-    '点击“生成设定”后，下方将显示实际发给 AI 的完整内容。': 'Sau khi bấm "Tạo thiết lập", bên dưới sẽ hiển thị toàn bộ nội dung thực sự gửi cho AI.',
+    '点击“生成设定”后，下方将显示实际发给 AI 的完整内容。': 'Sau khi bấm “Tạo thiết lập”, bên dưới sẽ hiển thị toàn bộ nội dung thực sự gửi cho AI.',
     '等待生成...': 'Đang chờ tạo...',
 
     // --- Bộ lọc lịch sử ---
@@ -398,7 +398,7 @@ export const VI = {
     '请选择模版来源：\\n\\n点击【确定】使用内置默认模版（推荐）\\n点击【取消】生成全新的通用模版': 'Hãy chọn nguồn mẫu:\\n\\nBấm 【OK】để dùng mẫu mặc định tích hợp (khuyến nghị)\\nBấm 【Hủy】để tạo mẫu tổng quát hoàn toàn mới',
     '已恢复默认': 'Đã khôi phục mặc định',
     '模板': 'mẫu',
-    '模版生成成功！请点击“保存模版”确认修改。': 'Tạo mẫu thành công! Hãy bấm "Lưu mẫu" để xác nhận thay đổi.',
+    '模版生成成功！请点击“保存模版”确认修改。': 'Tạo mẫu thành công! Hãy bấm “Lưu mẫu” để xác nhận thay đổi.',
     '模版生成失败: ': 'Tạo mẫu thất bại: ',
     '模版手动保存': 'Lưu mẫu thủ công',
     '模版已更新并保存至记录': 'Mẫu đã được cập nhật và lưu vào bản ghi',
@@ -465,7 +465,7 @@ export const VI = {
     '-- 临时使用 (不保存) --': '-- Dùng tạm (không lưu) --',
 
     // --- World Info panel ---
-    '此角色未绑定世界书，请在“世界书”标签页手动添加或在酒馆主界面绑定。': 'Nhân vật này chưa gắn World Info, hãy thêm thủ công ở tab "World Info" hoặc gắn ở giao diện chính SillyTavern.',
+    '此角色未绑定世界书，请在“世界书”标签页手动添加或在酒馆主界面绑定。': 'Nhân vật này chưa gắn World Info, hãy thêm thủ công ở tab “World Info” hoặc gắn ở giao diện chính SillyTavern.',
     '(已绑定)': '(đã gắn)',
     '(已固定)': '(đã ghim)',
     '取消固定': 'Bỏ ghim',

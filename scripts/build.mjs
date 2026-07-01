@@ -10,6 +10,7 @@
 // ============================================================================
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import { EN, VI } from '../i18n/dict.mjs';
 import { PATCHES } from '../i18n/patches.mjs';
@@ -105,4 +106,18 @@ for (const file of FILES) {
 console.log(`\n=== Xong. Tổng số dòng còn chữ Trung: ${totalLeftover} ===`);
 if (totalLeftover > 0) {
     console.log('→ Thêm các chuỗi còn thiếu vào i18n/dict.mjs rồi chạy lại: node scripts/build.mjs');
+}
+
+// --- Kiểm tra cú pháp index.js (BẮT BUỘC dùng chế độ module qua stdin, vì
+// `node --check <file>` cho kết quả PASS SAI với file ESM có chuỗi lỗi) ---
+console.log('\n=== Kiểm tra cú pháp index.js ===');
+try {
+    execSync('node --input-type=module --check', {
+        input: fs.readFileSync(path.join(ROOT, 'index.js')),
+        stdio: ['pipe', 'ignore', 'inherit'],
+    });
+    console.log('✅ index.js: cú pháp hợp lệ.');
+} catch {
+    console.error('❌ index.js: LỖI CÚ PHÁP (xem chi tiết ở trên). Thường do value trong dict.mjs chứa dấu " hoặc \' làm vỡ chuỗi — hãy dùng nháy cong “ ” thay thế.');
+    process.exitCode = 1;
 }
